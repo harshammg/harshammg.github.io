@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Harsha M | AI Engineer & Builder</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#08080c;color:#e4e4e7;font-family:'Inter',sans-serif;overflow-x:hidden}
+h1,h2,h3{font-family:'Space Grotesk',sans-serif}
+nav{position:fixed;top:0;width:100%;padding:1rem 2rem;display:flex;justify-content:space-between;align-items:center;background:rgba(8,8,12,.7);backdrop-filter:blur(12px);z-index:100;border-bottom:1px solid #1f1f23}
+nav a{color:#a1a1aa;text-decoration:none;margin-left:1.2rem;font-size:.9rem}nav a:hover{color:#fff}
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:2rem;position:relative}
+.blob{position:absolute;width:500px;height:500px;background:radial-gradient(circle,#4f46e522,transparent);filter:blur(60px);animation:float 8s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-40px)}}
+.hero h1{font-size:clamp(2.8rem,7vw,5rem);background:linear-gradient(90deg,#a5b4fc,#22d3ee,#a5b4fc);background-size:200%;-webkit-background-clip:text;-webkit-text-fill-color:transparent;animation:shine 5s linear infinite;z-index:1}
+@keyframes shine{to{background-position:200%}}
+.hero p{color:#a1a1aa;max-width:640px;margin:1.2rem 0;z-index:1}
+.btn{padding:.9rem 2rem;border-radius:999px;text-decoration:none;font-weight:600;transition:.3s;display:inline-block;margin:.4rem;z-index:1}
+.btn-p{background:linear-gradient(90deg,#6366f1,#06b6d4);color:#fff;border:none;box-shadow:0 10px 30px #6366f144}
+.btn-p:hover{transform:translateY(-2px) scale(1.02)}
+.btn-o{border:1px solid #3f3f46;color:#fff;background:#131318}
+section{padding:5rem 2rem;max-width:1100px;margin:auto}
+.reveal{opacity:0;transform:translateY(30px);transition:.8s}.reveal.visible{opacity:1;transform:none}
+h2.sec{font-size:2.2rem;margin-bottom:2.5rem;display:flex;align-items:center;gap:.8rem}
+h2.sec::before{content:'';width:32px;height:4px;background:linear-gradient(90deg,#6366f1,#06b6d4);border-radius:2px;display:inline-block}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem}
+.card{background:linear-gradient(180deg,#121218,#0e0e13);border:1px solid #232329;border-radius:20px;padding:1.8rem;cursor:pointer;transition:.4s;position:relative;overflow:hidden}
+.card:hover{transform:translateY(-6px);border-color:#6366f1}
+.tag{background:#1f1f23;border:1px solid #2e2e35;padding:.35rem.9rem;border-radius:999px;font-size:.78rem;margin:.2rem;display:inline-block}
+.timeline{position:relative;padding-left:2rem;border-left:2px solid #232329}
+.t-item{margin-bottom:2.5rem;position:relative}.t-item::before{content:'';position:absolute;left:-2.65rem;top:4px;width:12px;height:12px;background:#6366f1;border-radius:50%;box-shadow:0 0 15px #6366f1}
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.8);backdrop-filter:blur(8px);display:none;justify-content:center;align-items:center;z-index:200;padding:1rem}
+.modal.active{display:flex}.modal-box{background:#121218;border:1px solid #2e2e35;border-radius:20px;max-width:620px;width:100%;padding:2.5rem;animation:pop.3s;max-height:90vh;overflow-y:auto}
+@keyframes pop{from{transform:scale(.95);opacity:0}}
+.close{float:right;background:none;border:none;color:#a1a1aa;font-size:1.5rem;cursor:pointer}
+ul.pts{margin:1rem 0 0 1.1rem;color:#a1a1aa}ul.pts li{margin:.5rem 0}
+footer{background:#0e0e13;border-top:1px solid #1f1f23;text-align:center;padding:5rem 2rem}
+</style>
+</head>
+<body>
+<nav><strong style="font-family:'Space Grotesk'">Harsha M.</strong><div><a href="#about">About</a><a href="#projects">Projects</a><a href="#exp">Journey</a><a href="#contact">Contact</a></div></nav>
+
+<div class="hero"><div class="blob"></div>
+<div style="z-index:1;border:1px solid #2e2e35;background:#131318;padding:.4rem 1rem;border-radius:999px;font-size:.8rem;margin-bottom:1rem">✨ 10K+ on LinkedIn • 3x Hackathon Winner • IEEE Chair</div>
+<h1>Harsha M</h1>
+<p style="font-size:1.25rem;color:#fff;font-weight:600">I build AI agents that actually ship.</p>
+<p>Information Science Engineer (2027) specializing in Applied AI & Agentic Systems. 6-month AI Intern @ Xtract AI. Built 5+ production-grade AI tools.</p>
+<div><a href="#projects" class="btn btn-p">View My Work ↓</a><a href="mailto:harshammg@gmail.com" class="btn btn-o">Get in Touch</a></div>
+</div>
+
+<section id="about" class="reveal"><h2 class="sec">About Me</h2>
+<p style="color:#a1a1aa;max-width:720px;font-size:1.1rem">Results-driven Information Science student with 6 months as AI Intern building agentic workflows and LLM integrations. IEEE Branch Chair leading 100+ members. Seeking AI Engineer / Full-Stack roles where I can ship reliable AI systems.</p><br/><div id="skills"></div></section>
+
+<section id="projects" class="reveal"><h2 class="sec">Featured Projects</h2><div class="grid" id="projectGrid"></div></section>
+
+<section id="exp" class="reveal"><h2 class="sec">Journey</h2><div class="timeline">
+<div class="t-item"><strong>Chairperson — IEEE PESCE Student Branch</strong><br><small style="color:#6366f1">Oct 2023 – Present</small><p style="color:#a1a1aa">Leading 100+ members. Workshops, hackathons. IEEE Outstanding Volunteer Award.</p></div>
+<div class="t-item"><strong>AI Intern — Xtract AI</strong><br><small style="color:#6366f1">Jan 2026 – Jun 2026</small><p style="color:#a1a1aa">Built applied AI/agentic systems, model integration & automation workflows.</p></div>
+<div class="t-item"><strong>YouStart Fellow — Polygnan</strong><br><small style="color:#6366f1">Mar 2026 – May 2026</small><p style="color:#a1a1aa">10-week entrepreneurship fellowship. First Runner-Up.</p></div>
+<div class="t-item"><strong>Business Operations Intern — Neurology Legal Consulting</strong><br><small style="color:#6366f1">Feb 2025 – Jul 2025</small><p style="color:#a1a1aa">Global ops, Amazon optimization, startup investment research.</p></div>
+</div></section>
+
+<footer id="contact"><h2 style="font-size:2.5rem;margin-bottom:1rem">Let's build something impactful.</h2><p style="color:#a1a1aa;margin-bottom:2rem">Open to AI Engineer Intern, Backend Developer, and AI Automation roles.</p>
+<a href="mailto:harshammg@gmail.com" class="btn btn-p">harshammg@gmail.com</a><br><br>
+<a href="https://www.linkedin.com/in/harshamohan" style="color:#a1a1aa;margin:0 1rem">LinkedIn</a><a href="https://github.com/harshammg" style="color:#a1a1aa;margin:0 1rem">GitHub</a>
+<p style="margin-top:2rem;color:#52525b;font-size:.85rem">© 2026 Harsha M • PES College of Engineering, Mandya</p></footer>
+
+<div class="modal" id="modal"><div class="modal-box"><button class="close" onclick="closeModal()">×</button><div id="modalContent"></div></div></div>
+
+<script>
+const projects=[
+{title:"Imphex AI",tag:"Agentic Observability",desc:"Centralized logging & audit platform for AI agents.",bullets:["Built centralized logging for LLM calls capturing latency, cost, tool traces & failure points","Auto-generates human-readable audit reports, reducing debugging time for agent workflows","Flags anomalies in real-time to improve AI reliability"],stack:["Python","LLM APIs","Supabase"]},
+{title:"AI Shopping Agent",tag:"Conversational Commerce",desc:"24/7 sales agent for WhatsApp & web.",bullets:["Deployed 24/7 conversational agent for website chat + WhatsApp","Personalized recommendations based on catalog, policies & user behavior","Automated abandoned cart recovery flow to lift conversions"],stack:["n8n","Ollama","WhatsApp API"]},
+{title:"Bloomflo",tag:"HealthTech • Incubated at PES Next",desc:"Tablet-first clinical documentation.",bullets:["Building tablet-first system to replace paper IPD case sheets","Enables structured records, faster discharge summaries & insurance claims","Designed for paperless hospital workflows"],stack:["Flask","Supabase","Tablet UI"]},
+{title:"ML Audio-to-Data Pipeline",tag:"ML Infra",desc:"Audio → labelled training data.",bullets:["Pipeline converts raw audio into labelled training datasets","Automated preprocessing + labeling to accelerate model training"],stack:["Python","ML"]},
+{title:"Tap Open",tag:"Micro-SaaS",desc:"Free tools suite for builders.",bullets:["Shipped 4 free tools: Quick Links, Link-in-bio builder, Google Forms Timer, Bulk Messenger","Focused on speed and simplicity for creators & outreach teams"],stack:["HTML/CSS","JavaScript","Flask"]}
+];
+const grid=document.getElementById('projectGrid');
+projects.forEach((p,i)=>{grid.innerHTML+=`<div class="card" onclick="openModal(${i})"><div class="tag">${p.tag}</div><h3 style="margin:.8rem 0">${p.title}</h3><p style="color:#a1a1aa;font-size:.95rem">${p.desc}</p><p style="margin-top:1rem;color:#6366f1;font-size:.85rem">Click to explore →</p></div>`;});
+function openModal(i){const p=projects[i];document.getElementById('modalContent').innerHTML=`<div class="tag">${p.tag}</div><h2 style="margin:1rem 0">${p.title}</h2><ul class="pts">${p.bullets.map(b=>`<li>${b}</li>`).join('')}</ul><div style="margin-top:1rem">${p.stack.map(s=>`<span class="tag">${s}</span>`).join('')}</div><br><a href="https://github.com/harshammg" class="btn btn-p" style="padding:.6rem 1.5rem;font-size:.9rem">View on GitHub</a>`;document.getElementById('modal').classList.add('active')}
+function closeModal(){document.getElementById('modal').classList.remove('active')}
+document.getElementById('modal').onclick=e=>{if(e.target.id==='modal')closeModal()}
+const skills=["Python","C","Flask","Supabase","AWS","Agentic Workflows","OpenClaw","Ollama","n8n","LLM Integration","Prompt Engineering","GTM Strategy"];
+document.getElementById('skills').innerHTML=skills.map(s=>`<span class="tag">${s}</span>`).join('');
+const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}));
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
